@@ -1,0 +1,54 @@
+runtime: python38  # Adjust the Python version if needed
+env: flex  # Optional: Use the flexible environment for scaling
+
+# Specify dependencies (replace with actual package versions)
+libraries:
+- name: six
+  version: "1.19.0"
+- name: blinker
+  version: "1.7.0"
+- name: certifi
+  version: "2024.2.2"
+- name: charset-normalizer
+  version: "3.3.2"
+- name: click
+  version: "8.1.7"
+- name: dlib
+  version: "19.24.2"
+- name: face-recognition
+  version: "1.3.0"
+- name: face-recognition-models
+  version: "0.3.0"
+- name: Flask
+  version: "3.0.2"
+- name: Flask-Cors
+  version: "4.0.0"
+- name: gunicorn
+  version: "21.2.0"
+- name: idna
+  version: "3.6"
+- name: itsdangerous
+  version: "2.1.2"
+- name: Jinja2
+  version: "3.1.3"
+- name: MarkupSafe
+  version: "2.1.5"
+- name: numpy
+  version: "1.24.4"
+- name: packaging
+  version: "24.0"
+- name: pillow
+  version: "10.2.0"
+- name: requests
+  version: "2.31.0"
+- name: urllib3
+  version: "2.2.1"
+- name: Werkzeug
+  version: "3.0.1"
+
+api_version: 1
+
+handlers:
+- url: /.*
+  script: app.py  # Replace with the actual name of your Flask app file
+
